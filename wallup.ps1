@@ -8,6 +8,6 @@ $PicturePath = "$($PictureFolder)\$($FileName)"
 $ImageUrl = "http://www.bing.com$($Bingxml.images.image.urlBase)_$($Resolution).jpg";
 Invoke-WebRequest -UseBasicParsing -Uri $ImageUrl -OutFile "$PicturePath";
 
-#set image as wallper
+#set image as wallpaper
 set-itemproperty -path "HKCU:Control Panel\Desktop" -name WallPaper -value "$PicturePath";
 rundll32.exe user32.dll, UpdatePerUserSystemParameters, 0, $false
