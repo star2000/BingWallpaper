@@ -4,8 +4,8 @@ $Resolution = "1920x1080"
 $FileName = "wallpaper.jpg"
 $PictureFolder = "$env:USERPROFILE\Pictures"
 $PicturePath = "$PictureFolder\$FileName"
-[xml]$Bingxml = (New-Object System.Net.WebClient -Property @{Encoding = [Text.Encoding]::UTF8 }).DownloadString("http://bing.com/HPImageArchive.aspx?n=1&mkt=$Market");
-$ImageUrl = "http://bing.com$($Bingxml.images.image.urlBase)_$Resolution.jpg";
+[xml]$Bingxml = (New-Object System.Net.WebClient -Property @{Encoding = [Text.Encoding]::UTF8 }).DownloadString("http://cn.bing.com/HPImageArchive.aspx?n=1&mkt=$Market");
+$ImageUrl = "http://cn.bing.com$($Bingxml.images.image.urlBase)_$Resolution.jpg";
 (New-Object System.Net.WebClient).DownloadFile($ImageUrl, $PicturePath)
 
 #set image as wallpaper
