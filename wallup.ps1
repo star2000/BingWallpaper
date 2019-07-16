@@ -11,5 +11,4 @@ $ImageUrl = "http://www.bing.com$($Bing.images.image.urlBase)_$Resolution.jpg"
 (New-Object System.Net.WebClient).DownloadFile($ImageUrl, $Path)
 
 # 设置壁纸
-(Add-Type -MemberDefinition '[DllImport("user32.dll")]public static extern bool 
-SystemParametersInfo (uint uiAction, uint uiParam, String pvParam, uint fWinIni);' -Name 'Params' -PassThru)::SystemParametersInfo(20, 0, $Path, 3)
+(Add-Type -MemberDefinition '[DllImport("user32.dll")]public static extern bool SystemParametersInfo (uint uiAction, uint uiParam, String pvParam, uint fWinIni);' -Name 'Params' -PassThru)::SystemParametersInfo(20, 0, $Path, 3)
