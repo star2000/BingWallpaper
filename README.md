@@ -5,7 +5,7 @@
 ## 注册任务计划
 **此命令需要管理员权限**
 ```ps1
-Register-ScheduledTask wallup -Action (New-ScheduledTaskAction powershell { -NoLogo -NoProfile -NonInteractive -WindowStyle Hidden Invoke-Expression (New-Object Net.WebClient).DownloadString('http://github.com/star2000/powershelling/raw/master/wallup.ps1') }) -Trigger (New-ScheduledTaskTrigger -Daily -At 0:0) -Settings (New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -RunOnlyIfNetworkAvailable -StartWhenAvailable -Priority 0) -AsJob
+Register-ScheduledTask wallup -Action (New-ScheduledTaskAction powershell { -NoLogo -NoProfile -NonInteractive -WindowStyle Hidden Invoke-Expression (New-Object Net.WebClient).DownloadString('http://github.com/star2000/BingWallpaper/raw/master/wallup.ps1') }) -Trigger (New-ScheduledTaskTrigger -Daily -At 0:0) -Settings (New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -RunOnlyIfNetworkAvailable -StartWhenAvailable -Priority 0) -AsJob
 ```
 ## 立即执行
 ```ps1
