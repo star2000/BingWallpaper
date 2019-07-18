@@ -16,6 +16,7 @@ Start-ScheduledTask wallup
 Unregister-ScheduledTask wallup
 ```
 ## 设置
+**通过环境变量改变行为**
 
 - 壁纸文件夹
   - 环境变量名：`WallpaperPath`
