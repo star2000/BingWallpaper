@@ -1,14 +1,15 @@
 Param (
-    $Path = "$env:USERPROFILE\Pictures\wallpaper.jpg",
-    $Resolution = '1920x1080',
-    $ensearch = 0,
-    $idx = 0
+    $WallpaperPath = ($env:WallpaperPath, "$env:USERPROFILE\Pictures" | Select-Object -First 1),
+    $WallpaperResolution = ($env:WallpaperResolution, '1920x1080' | Select-Object -First 1),
+    $EnSearch = ($env:EnSearch, 0 | Select-Object -First 1),
+    $DaysAgo = ($env:DaysAgo, 0 | Select-Object -First 1)
 )
+$WallpaperPath += '\wallpaper.jpg'
 
-#下载壁纸
-[xml]$Bing = (New-Object System.Net.WebClient -Property @{Encoding = [Text.Encoding]::UTF8 }).DownloadString("http://www.bing.com/HPImageArchive.aspx?n=1&idx=$idx&ensearch=$ensearch")
-$ImageUrl = "http://www.bing.com$($Bing.images.image.urlBase)_$Resolution.jpg"
-(New-Object System.Net.WebClient).DownloadFile($ImageUrl, $Path)
+# Download wallpaper
+[xml]$Bing = (New-Object Net.WebClient -Property @{Encoding = [Text.Encoding]::UTF8 }).DownloadString("http://www.bing.com/HPImageArchive.aspx?n=1&idx=$DaysAgo&ensearch=$EnSearch")
+$ImageUrl = "http://www.bing.com$($Bing.images.image.urlBase)_$WallpaperResolution.jpg"
+(New-Object Net.WebClient).DownloadFile($ImageUrl, $WallpaperPath)
 
-# 设置壁纸
-(Add-Type -MemberDefinition '[DllImport("user32.dll")]public static extern bool SystemParametersInfo (uint uiAction, uint uiParam, String pvParam, uint fWinIni);' -Name 'Params' -PassThru)::SystemParametersInfo(20, 0, $Path, 3)
+# Set wallpaper
+(Add-Type -MemberDefinition '[DllImport("user32.dll")]public static extern bool SystemParametersInfo (uint uiAction, uint uiParam, String pvParam, uint fWinIni);' -Name 'Params' -PassThru)::SystemParametersInfo(20, 0, $WallpaperPath, 3)
