@@ -9,11 +9,12 @@ iex (New-Object Net.WebClient).DownloadString('http://github.com/star2000/BingWa
 ```
 ## 立即执行
 ```ps1
-Start-ScheduledTask wallup star2000
+Start-ScheduledTask BingWallpaper star2000
 ```
 ## 注销任务计划
+**此命令需要管理员权限**
 ```ps1
-Unregister-ScheduledTask wallup \star2000\
+Unregister-ScheduledTask BingWallpaper \star2000\
 ```
 ## 设置
 **通过环境变量改变行为**
