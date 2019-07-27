@@ -15,14 +15,26 @@
 4. 点击确定，大功告成
 
 ## 立即执行
+### Win10
 ```ps1
 Start-ScheduledTask BingWallpaper star2000
 ```
+### Win7
+1. `Win+R`运行`taskmgr`
+2. 打开`/star2000`
+3. 右击`BingWallpaper`，点运行
+
 ## 注销任务计划
+### Win10
 **此命令需要管理员权限**
 ```ps1
 Unregister-ScheduledTask BingWallpaper \star2000\
 ```
+### Win7
+1. `Win+R`运行`taskmgr`
+2. 打开`/star2000`
+3. 右击`BingWallpaper`，点删除
+
 ## 设置
 **通过环境变量改变行为**
 
