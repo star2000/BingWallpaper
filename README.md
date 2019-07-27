@@ -9,10 +9,11 @@
 (New-Object Net.WebClient).DownloadString('http://raw.githubusercontent.com/star2000/BingWallpaper/master/install.ps1') | iex
 ```
 ### Win7
-下载[任务文件](https://raw.githubusercontent.com/star2000/BingWallpaper/master/BingWallpaper.xml)
-`Win+R`运行`taskmgr`
-操作 -> 导入任务 -> 选择下载的任务
-点击确定，大功告成
+1. 下载[任务文件](https://raw.githubusercontent.com/star2000/BingWallpaper/master/BingWallpaper.xml)
+2. `Win+R`运行`taskmgr`
+3. 操作 -> 导入任务 -> 选择下载的任务
+4. 点击确定，大功告成
+
 ## 立即执行
 ```ps1
 Start-ScheduledTask BingWallpaper star2000
