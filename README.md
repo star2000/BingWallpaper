@@ -10,7 +10,7 @@
 ```
 ### Win7
 1. 下载[任务文件](https://raw.githubusercontent.com/star2000/BingWallpaper/master/BingWallpaper.xml)
-2. `Win+R`运行`taskmgr`
+2. `Win+R`运行`taskschd.msc`
 3. 操作 -> 导入任务 -> 选择下载的任务
 4. 点击确定，大功告成
 
