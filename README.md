@@ -6,7 +6,7 @@
 ### Win10
 **此命令需要管理员权限**
 ```ps1
-(New-Object Net.WebClient).DownloadString('http://raw.githubusercontent.com/star2000/BingWallpaper/master/install.ps1') | iex
+iwr -useb https://github.com/star2000/BingWallpaper/raw/master/install.ps1 | iex
 ```
 ### Win7
 1. 下载[任务文件](https://raw.githubusercontent.com/star2000/BingWallpaper/master/BingWallpaper.xml)
