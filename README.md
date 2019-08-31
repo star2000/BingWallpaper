@@ -1,8 +1,10 @@
-# 每日必应壁纸
+# BingWallpaper
 
-这么高质量的必应网页背景，不做壁纸真是可惜了
+每日必应壁纸
 
 ## Win8及以上
+
+<details>
 
 使用`PowerShell`执行以下命令
 
@@ -26,7 +28,11 @@ Start-ScheduledTask BingWallpaper star2000
 Unregister-ScheduledTask BingWallpaper \star2000\
 ```
 
+</details>
+
 ## Win7
+
+<details>
 
 ### 注册任务计划
 
@@ -46,7 +52,11 @@ Unregister-ScheduledTask BingWallpaper \star2000\
 2. 打开`任务计划程序库/star2000`
 3. 右击`BingWallpaper`，点删除
 
+</details>
+
 ## 设置
+
+<details>
 
 通过环境变量改变行为
 
@@ -75,10 +85,12 @@ Unregister-ScheduledTask BingWallpaper \star2000\
 - 国际版
   - 环境变量名：`EnSearch`
   - 默认值：`0`
-  - 可选值：`0`或`1`
+  - 可选值：`0`, `1`
 - 几天前
   - 环境变量名：`DaysAgo`
   - 默认值：`0`
-  - 可选值：`0`到`7`
+  - 可选值：`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`
+
+</details>
 
 [任务文件]: https://raw.githubusercontent.com/star2000/BingWallpaper/master/BingWallpaper.xml
