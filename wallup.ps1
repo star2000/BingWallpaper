@@ -7,9 +7,8 @@ Param (
 $WallpaperPath += '\wallpaper.jpg'
 
 # Download wallpaper
-[xml]$Bing = (New-Object Net.WebClient -Property @{Encoding = [Text.Encoding]::UTF8 }).DownloadString("http://www.bing.com/HPImageArchive.aspx?n=1&idx=$DaysAgo&ensearch=$EnSearch")
-$ImageUrl = "http://www.bing.com$($Bing.images.image.urlBase)_$WallpaperResolution.jpg"
-(New-Object Net.WebClient).DownloadFile($ImageUrl, $WallpaperPath)
+[xml]$Bing = Invoke-WebRequest "www.bing.com/HPImageArchive.aspx?n=1&idx=$DaysAgo&ensearch=$EnSearch" -UseBasicParsing
+Invoke-WebRequest "www.bing.com$($Bing.images.image.urlBase)_$WallpaperResolution.jpg" -UseBasicParsing -OutFile $WallpaperPath
 
 # Set wallpaper
 (Add-Type -MemberDefinition '[DllImport("user32.dll")]public static extern bool SystemParametersInfo (uint uiAction, uint uiParam, String pvParam, uint fWinIni);' -Name 'Params' -PassThru)::SystemParametersInfo(20, 0, $WallpaperPath, 3)
