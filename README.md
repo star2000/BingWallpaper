@@ -1,10 +1,8 @@
 # BingWallpaper
 
-每日必应壁纸
+Win10 每日必应壁纸
 
-## Win8及以上
-
-<details>
+## 使用
 
 使用`PowerShell`执行以下命令
 
@@ -28,35 +26,7 @@ Start-ScheduledTask BingWallpaper star2000
 Unregister-ScheduledTask BingWallpaper \star2000\
 ```
 
-</details>
-
-## Win7
-
-<details>
-
-### 注册任务计划
-
-1. 下载[任务文件]
-2. `Win+R`运行`taskschd.msc`
-3. 操作 -> 导入任务 -> 选择下载的任务
-
-### 运行任务计划
-
-1. `Win+R`运行`taskschd.msc`
-2. 打开`任务计划程序库/star2000`
-3. 右击`BingWallpaper`，点运行
-
-### 删除任务计划
-
-1. `Win+R`运行`taskschd.msc`
-2. 打开`任务计划程序库/star2000`
-3. 右击`BingWallpaper`，点删除
-
-</details>
-
 ## 设置
-
-<details>
 
 通过环境变量改变行为
 
