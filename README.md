@@ -60,7 +60,3 @@ Unregister-ScheduledTask BingWallpaper \star2000\
   - 环境变量名：`DaysAgo`
   - 默认值：`0`
   - 可选值：`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`
-
-</details>
-
-[任务文件]: https://raw.githubusercontent.com/star2000/BingWallpaper/master/BingWallpaper.xml
