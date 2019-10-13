@@ -20,8 +20,6 @@ Start-ScheduledTask BingWallpaper star2000
 
 ### 注销任务计划
 
-此命令需要管理员权限
-
 ```ps1
 Unregister-ScheduledTask BingWallpaper \star2000\
 ```
