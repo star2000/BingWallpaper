@@ -45,10 +45,14 @@ iwr -useb git.io/BingWallpaper.uninstall | iex
     - `320x240`
     - `240x320`
 - 国际版
-  - 环境变量名：`EnSearch`
+  - 环境变量名：`WallpaperEnSearch`
   - 默认值：`0`
   - 可选值：`0`, `1`
 - 几天前
-  - 环境变量名：`DaysAgo`
+  - 环境变量名：`WallpaperDaysAgo`
   - 默认值：`0`
   - 可选值：`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`
+- 保留
+  - 环境变量名：`WallpaperKeep`
+  - 默认值：`0`
+  - 可选值：`0`, `1`
