@@ -6,22 +6,16 @@ Win10 每日必应壁纸
 
 使用`PowerShell`执行以下命令
 
-### 注册任务计划
+### 安装
 
 ```ps1
 iwr -useb git.io/BingWallpaper | iex
 ```
 
-### 立即执行
+### 卸载
 
 ```ps1
-Start-ScheduledTask BingWallpaper star2000
-```
-
-### 注销任务计划
-
-```ps1
-Unregister-ScheduledTask BingWallpaper \star2000\
+iwr -useb git.io/BingWallpaper.uninstall | iex
 ```
 
 ## 设置
