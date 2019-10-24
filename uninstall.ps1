@@ -1,2 +1,4 @@
-Remove-Item $env:USERPROFILE\BingWallpaper.js -Force
+$ErrorActionPreference = 'Stop'
+
 Unregister-ScheduledTask BingWallpaper \star2000\ -Confirm:$false
+Remove-Item $env:USERPROFILE\BingWallpaper.vbs -Force
