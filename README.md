@@ -22,11 +22,7 @@ iwr -useb git.io/BingWallpaper.uninstall | iex
 
 通过环境变量改变行为
 
-- 壁纸文件夹
-  - 环境变量名：`WallpaperPath`
-  - 默认值：`$env:USERPROFILE\Pictures`
-  - 可选值：任意有读写权限的文件夹
-- 壁纸分辨率
+- 分辨率
   - 环境变量名：`WallpaperResolution`
   - 默认值：`1920x1080`
   - 可选值：
@@ -52,7 +48,3 @@ iwr -useb git.io/BingWallpaper.uninstall | iex
   - 环境变量名：`WallpaperDaysAgo`
   - 默认值：`0`
   - 可选值：`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`
-- 保留
-  - 环境变量名：`WallpaperKeep`
-  - 默认值：`0`
-  - 可选值：`0`, `1`
