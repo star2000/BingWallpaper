@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop'
 Register-ScheduledTask BingWallpaper star2000 (
     New-ScheduledTaskAction $env:USERPROFILE\BingWallpaper.vbs
 ) (
-    New-ScheduledTaskTrigger -Daily -At 0:0
+    New-ScheduledTaskTrigger -Daily -At 0:0z
 ) (
     New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -RunOnlyIfNetworkAvailable -StartWhenAvailable
 ) -Force
