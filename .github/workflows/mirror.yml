@@ -1,0 +1,13 @@
+on:
+  push
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 下载
+        run: git clone --bare https://github.com/${{ github.repository }} .
+
+      - name: 同步
+        run: git push --mirror https://xing2000:${{ secrets.TENCENT_TOKEN }}@git.dev.tencent.com/xing2000/BingWallpaper

@@ -10,13 +10,13 @@ Windows 每日必应壁纸
 ### 安装
 
 ```ps1
-(New-Object Net.WebClient).DownloadString('http://raw.githubusercontent.com/star2000/BingWallpaper/master/install.ps1') | iex
+(New-Object Net.WebClient).DownloadString('http://dev.tencent.com/u/xing2000/p/BingWallpaper/git/raw/master/install.ps1') | iex
 ```
 
 ### 卸载
 
 ```ps1
-(New-Object Net.WebClient).DownloadString('http://raw.githubusercontent.com/star2000/BingWallpaper/master/uninstall.ps1') | iex
+(New-Object Net.WebClient).DownloadString('http://dev.tencent.com/u/xing2000/p/BingWallpaper/git/raw/master/uninstall.ps1') | iex
 ```
 
 ## 设置
