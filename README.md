@@ -1,6 +1,7 @@
 # BingWallpaper
 
-Win10 每日必应壁纸
+Windows 每日必应壁纸  
+最低支持Win7、Win2008
 
 ## 使用
 
@@ -9,19 +10,23 @@ Win10 每日必应壁纸
 ### 安装
 
 ```ps1
-iwr -useb git.io/BingWallpaper | iex
+(New-Object Net.WebClient).DownloadString('http://raw.githubusercontent.com/star2000/BingWallpaper/master/install.ps1') | iex
 ```
 
 ### 卸载
 
 ```ps1
-iwr -useb git.io/BingWallpaper.uninstall | iex
+(New-Object Net.WebClient).DownloadString('http://raw.githubusercontent.com/star2000/BingWallpaper/master/uninstall.ps1') | iex
 ```
 
 ## 设置
 
 通过环境变量改变行为
 
+- 保存文件夹
+  - 环境变量名：`WallpaperPath`
+  - 默认值：无
+  - 可选值：任意有写权限的文件夹
 - 分辨率
   - 环境变量名：`WallpaperResolution`
   - 默认值：`1920x1080`

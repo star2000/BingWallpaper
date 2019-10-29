@@ -1,4 +1,2 @@
-$ErrorActionPreference = 'Stop'
-
-Unregister-ScheduledTask BingWallpaper \star2000\ -Confirm:$false
-Remove-Item $env:USERPROFILE\BingWallpaper.vbs -Force
+Remove-Item "$env:USERPROFILE\BingWallpaper.vbs" -Force
+schtasks /Delete /TN '\star2000\BingWallpaper' /F

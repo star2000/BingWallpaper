@@ -1,15 +1,23 @@
 $ErrorActionPreference = 'Stop'
 
-Register-ScheduledTask BingWallpaper star2000 (
-    New-ScheduledTaskAction $env:USERPROFILE\BingWallpaper.vbs
-) (
-    New-ScheduledTaskTrigger -Daily -At 0:0z
-) (
-    New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -RunOnlyIfNetworkAvailable -StartWhenAvailable
-) -Force
+if ($Host.Version.Major -ge 3) {
+    Register-ScheduledTask BingWallpaper star2000 (
+        New-ScheduledTaskAction %USERPROFILE%\BingWallpaper.vbs
+    ) (
+        New-ScheduledTaskTrigger -Daily -At 0:0z
+    ) (
+        New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -RunOnlyIfNetworkAvailable -StartWhenAvailable
+    ) -Force | Out-Null
+}
+else {
+    $Xml = "$env:TMP\BingWallpaper.xml"
+    (New-Object Net.WebClient).DownloadFile('http://raw.githubusercontent.com/star2000/BingWallpaper/master/BingWallpaper.xml', $Xml)
+    schtasks /Create /XML $Xml /TN '\star2000\BingWallpaper' /F
+    Remove-Item $Xml -Force
+}
 
 @'
-CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive iwr -useb github.com/star2000/BingWallpaper/raw/master/wallup.ps1 | iex",0
+CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""(New-Object Net.WebClient).DownloadString('http://raw.githubusercontent.com/star2000/BingWallpaper/master/wallup.ps1') | iex""",0
 '@ > $env:USERPROFILE\BingWallpaper.vbs
 
-Start-ScheduledTask BingWallpaper star2000
+schtasks /Run /TN '\star2000\BingWallpaper'
