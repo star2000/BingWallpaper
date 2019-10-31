@@ -23,10 +23,11 @@ Windows 每日必应壁纸
 
 通过环境变量改变行为
 
-- 保存文件夹
+- 保存路径
   - 环境变量名：`WallpaperPath`
   - 默认值：无
-  - 可选值：任意有写权限的文件夹
+  - 可选值：任意有写权限的路径
+  - 注意：不以`.jpg`结尾时，文件名格式默认为`%F`，参见[UNIX时间格式]
 - 分辨率
   - 环境变量名：`WallpaperResolution`
   - 默认值：`1920x1080`
@@ -53,3 +54,5 @@ Windows 每日必应壁纸
   - 环境变量名：`WallpaperDaysAgo`
   - 默认值：`0`
   - 可选值：`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`
+
+[UNIX时间格式]: https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.utility/get-date#notes
