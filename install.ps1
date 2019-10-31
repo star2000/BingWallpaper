@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 if ($Host.Version.Major -ge 3) {
     Register-ScheduledTask BingWallpaper star2000 (
-        New-ScheduledTaskAction %USERPROFILE%\BingWallpaper.vbs
+        New-ScheduledTaskAction wscript BingWallpaper.vbs %USERPROFILE%
     ) (
         New-ScheduledTaskTrigger -Daily -At 0:0z
     ) (
