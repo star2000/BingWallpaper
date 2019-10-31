@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 if ($Host.Version.Major -ge 3) {
     Register-ScheduledTask BingWallpaper star2000 (
-        New-ScheduledTaskAction wscript BingWallpaper.vbs %USERPROFILE%
+        New-ScheduledTaskAction wscript BingWallpaper.vbs %ALLUSERSPROFILE%
     ) (
         New-ScheduledTaskTrigger -Daily -At 0:0z
     ) (
@@ -18,6 +18,6 @@ else {
 
 @'
 CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""(New-Object Net.WebClient).DownloadString('http://cdn.jsdelivr.net/gh/star2000/BingWallpaper/wallup.ps1') | iex""",0
-'@ > $env:USERPROFILE\BingWallpaper.vbs
+'@ > $env:ALLUSERSPROFILE\BingWallpaper.vbs
 
 schtasks /Run /TN '\star2000\BingWallpaper'
