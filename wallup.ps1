@@ -27,7 +27,7 @@ Remove-Item $WallpaperBitmap -Force
 # Save wallpaper if $env:WallpaperPath is set
 if ($Path) {
     if ($Path -notmatch '.jpg$') {
-        $Path += '\%F.jpg'
+        $Path = Join-Path $Path '%F.jpg'
     }
     Copy-Item $Wallpaper $(Get-Date -UFormat $Path) -Force
 }
