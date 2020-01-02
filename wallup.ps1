@@ -11,7 +11,7 @@ $WallpaperBitmap = "$env:TMP\wallpaper.bmp"
 # Download wallpaper
 $WebClient = New-Object Net.WebClient
 $WebClient.Encoding = [Text.Encoding]::UTF8
-$Bing = [Xml]$WebClient.DownloadString("http://www.bing.com/HPImageArchive.aspx?n=1&idx=$DaysAgo&ensearch=$EnSearch")
+$Bing = [Xml]$WebClient.DownloadString("http://www.bing.com/HPImageArchive.aspx?n=1&mkt=$PSCulture&idx=$DaysAgo&ensearch=$EnSearch")
 $WebClient.DownloadFile("http://www.bing.com$($Bing.images.image.urlBase)_$Resolution.jpg", $Wallpaper)
 
 # Set wallpaper
