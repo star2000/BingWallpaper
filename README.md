@@ -7,18 +7,18 @@ Windows 每日必应壁纸
 
 ## 使用
 
-使用`PowerShell`执行以下命令
+复制以下命令，按`Win+R`，粘贴，回车
 
 ### 安装
 
 ```ps1
-(New-Object Net.WebClient).DownloadString('http://cdn.jsdelivr.net/gh/star2000/BingWallpaper/install.ps1') | iex
+powershell (New-Object Net.WebClient).DownloadString('http://cdn.jsdelivr.net/gh/star2000/BingWallpaper/install.ps1') | iex
 ```
 
 ### 卸载
 
 ```ps1
-(New-Object Net.WebClient).DownloadString('http://cdn.jsdelivr.net/gh/star2000/BingWallpaper/uninstall.ps1') | iex
+powershell (New-Object Net.WebClient).DownloadString('http://cdn.jsdelivr.net/gh/star2000/BingWallpaper/uninstall.ps1') | iex
 ```
 
 ## 设置
