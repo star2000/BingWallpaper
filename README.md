@@ -1,6 +1,6 @@
 # BingWallpaper
 
-[![](https://img.shields.io/badge/dynamic/json?label=users&query=files['/wallup.ps1'].total&url=https://data.jsdelivr.com/v1/package/gh/star2000/BingWallpaper@1.1.0/stats/day)](https://www.jsdelivr.com/package/gh/star2000/BingWallpaper)
+[![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hd/star2000/BingWallpaper)](https://www.jsdelivr.com/package/gh/star2000/BingWallpaper)
 
 Windows 每日必应壁纸  
 最低支持Win7、Win2008
