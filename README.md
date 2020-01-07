@@ -23,13 +23,14 @@ powershell (New-Object Net.WebClient).DownloadString('http://cdn.jsdelivr.net/gh
 
 ## 设置
 
-通过环境变量改变行为
+通过环境变量改变行为  
+手动刷新执行`schtasks /Run /TN "\star2000\BingWallpaper"`
 
 - 保存路径
   - 环境变量名：`WallpaperPath`
-  - 默认值：无
+  - 默认值：无（不保存）
   - 可选值：任意有写权限的路径
-  - 注意：不以`.jpg`结尾时，文件名格式默认为`%Y-%m-%d`，参见[UNIX时间格式]
+  - 注意：不以`.jpg`结尾时，文件名默认为`%Y-%m-%d.jpg`（年年年年-月月-日日.jpg），参见[UNIX时间格式]
 - 分辨率
   - 环境变量名：`WallpaperResolution`
   - 默认值：`1920x1080`
@@ -50,11 +51,11 @@ powershell (New-Object Net.WebClient).DownloadString('http://cdn.jsdelivr.net/gh
     - `240x320`
 - 国际版
   - 环境变量名：`WallpaperEnSearch`
-  - 默认值：`0`
+  - 默认值：`0`（国内版）
   - 可选值：`0`, `1`
 - 几天前
   - 环境变量名：`WallpaperDaysAgo`
-  - 默认值：`0`
+  - 默认值：`0`（今天）
   - 可选值：`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`
 
 [UNIX时间格式]: https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.utility/get-date#notes
