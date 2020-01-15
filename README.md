@@ -1,7 +1,5 @@
 # BingWallpaper
 
-[![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hd/star2000/BingWallpaper)](https://www.jsdelivr.com/package/gh/star2000/BingWallpaper)
-
 Windows 每日必应壁纸  
 最低支持Win7、Win2008
 
