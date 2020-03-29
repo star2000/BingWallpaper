@@ -32,3 +32,6 @@ if ($Path) {
     Copy-Item $Wallpaper $(Get-Date -UFormat $Path) -Force
 }
 Remove-Item $Wallpaper -Force
+
+# Count
+$WebClient.DownloadString('http://cdn.jsdelivr.net/gh/star2000/count@2/count')

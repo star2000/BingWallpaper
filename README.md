@@ -1,5 +1,10 @@
 # BingWallpaper
 
+![total / day](https://img.shields.io/badge/dynamic/json?url=https://data.jsdelivr.com/v1/package/gh/star2000/count@2/stats/day&label=total&query=total&suffix=+/+day&style=flat-square&link=https://github.com/star2000/count)
+![total / week](https://img.shields.io/badge/dynamic/json?url=https://data.jsdelivr.com/v1/package/gh/star2000/count@2/stats/week&label=total&query=total&suffix=+/+week&style=flat-square&link=https://github.com/star2000/count)
+![total / month](https://img.shields.io/badge/dynamic/json?url=https://data.jsdelivr.com/v1/package/gh/star2000/count@2/stats/month&label=total&query=total&suffix=+/+month&style=flat-square&link=https://github.com/star2000/count)
+![total / year](https://img.shields.io/badge/dynamic/json?url=https://data.jsdelivr.com/v1/package/gh/star2000/count@2/stats/year&label=total&query=total&suffix=+/+year&style=flat-square&link=https://github.com/star2000/count)
+
 Windows 每日必应壁纸  
 每日标准时间0点(每天8点)自动触发  
 如果没开机或没联网, 则自动延迟  
