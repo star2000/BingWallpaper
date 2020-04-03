@@ -11,13 +11,13 @@ if ($Host.Version.Major -ge 3) {
 }
 else {
     $Xml = "$env:TMP\BingWallpaper.xml"
-    (New-Object Net.WebClient).DownloadFile('http://cdn.jsdelivr.net/gh/star2000/BingWallpaper/BingWallpaper.xml', $Xml)
+    (New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/star2000/BingWallpaper/master/BingWallpaper.xml', $Xml)
     schtasks /Create /XML $Xml /TN '\star2000\BingWallpaper' /F
     Remove-Item $Xml -Force
 }
 
 @'
-CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""(New-Object Net.WebClient).DownloadString('http://cdn.jsdelivr.net/gh/star2000/BingWallpaper/wallup.ps1') | iex""",0
+CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""(New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/star2000/BingWallpaper/master/wallup.ps1') | iex""",0
 '@ > $env:ALLUSERSPROFILE\BingWallpaper.vbs
 
 schtasks /Run /TN '\star2000\BingWallpaper'
