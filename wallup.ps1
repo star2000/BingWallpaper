@@ -34,4 +34,5 @@ if ($Path) {
 Remove-Item $Wallpaper -Force
 
 # Count
-$WebClient.DownloadString('http://cdn.jsdelivr.net/gh/star2000/count@2/count') -ErrorAction SilentlyContinue
+$ErrorActionPreference = 'SilentlyContinue'
+$WebClient.DownloadString('http://cdn.jsdelivr.net/gh/star2000/count@2/count')
