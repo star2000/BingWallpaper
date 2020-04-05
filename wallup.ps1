@@ -33,6 +33,13 @@ if ($Path) {
 }
 Remove-Item $Wallpaper -Force
 
+# Update link
+if (Test-Path "$env:ALLUSERSPROFILE\BingWallpaper.vbs") {
+    @'
+CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""(New-Object Net.WebClient).DownloadString('https://xing2000.coding.net/p/mirrors/d/BingWallpaper/git/raw/master/wallup.ps1') | iex""",0
+'@ > "$env:ALLUSERSPROFILE\BingWallpaper.vbs"
+}
+
 # Count
 $ErrorActionPreference = 'SilentlyContinue'
 $WebClient.DownloadString('http://cdn.jsdelivr.net/gh/star2000/count@2/count')

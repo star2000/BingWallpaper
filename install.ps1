@@ -18,6 +18,6 @@ else {
 
 @'
 CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""(New-Object Net.WebClient).DownloadString('https://xing2000.coding.net/p/mirrors/d/BingWallpaper/git/raw/master/wallup.ps1') | iex""",0
-'@ > $env:ALLUSERSPROFILE\BingWallpaper.vbs
+'@ > "$env:ALLUSERSPROFILE\BingWallpaper.vbs"
 
 schtasks /Run /TN '\star2000\BingWallpaper'
