@@ -44,6 +44,7 @@ powershell (New-Object Net.WebClient).DownloadString('https://xing2000.coding.ne
   - 环境变量名：`WallpaperResolution`
   - 默认值：`1920x1080`
   - 可选值：
+    - `UHD`（原图分辨率，一般4k以上）
     - `1920x1200`
     - `1920x1080`
     - `1366x768`
