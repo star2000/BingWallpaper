@@ -39,7 +39,7 @@ powershell (New-Object Net.WebClient).DownloadString('https://xing2000.coding.ne
   - 环境变量名：`WallpaperPath`
   - 默认值：无（不保存）
   - 可选值：任意有写权限的路径
-  - 注意：不以`.jpg`结尾时，文件名默认为`%Y-%m-%d.jpg`（年年年年-月月-日日.jpg），参见[UNIX 时间格式](unix时间格式)
+  - 注意：不以`.jpg`结尾时，文件名默认为`%Y-%m-%d.jpg`（年年年年-月月-日日.jpg），参见[UNIX 时间格式](https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.utility/get-date#notes)
 - 分辨率
   - 环境变量名：`WallpaperResolution`
   - 默认值：`1920x1080`
@@ -71,5 +71,3 @@ powershell (New-Object Net.WebClient).DownloadString('https://xing2000.coding.ne
 ## 打赏
 
 ![](https://blog.star2000.work/images/alipay.png)
-
-[unix时间格式]: https://docs.microsoft.com/zh-cn/powershell/module/microsoft.powershell.utility/get-date#notes
