@@ -68,6 +68,4 @@ powershell (New-Object Net.WebClient).DownloadString('https://xing2000.coding.ne
   - 默认值：`0`（今天）
   - 可选值：`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`
 
-## 打赏
-
-![](https://blog.star2000.work/images/alipay.png)
+## [捐赠](https://blog.star2000.work/images/alipay.png)
