@@ -36,7 +36,7 @@ Remove-Item $Wallpaper -Force
 # Update link
 if (Test-Path "$env:ALLUSERSPROFILE\BingWallpaper.vbs") {
     @'
-CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""(New-Object Net.WebClient).DownloadString('https://xing2000.coding.net/p/mirrors/d/BingWallpaper/git/raw/master/wallup.ps1') | iex""",0
+CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""(New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/star2000/BingWallpaper/master/wallup.ps1') | iex""",0
 '@ > "$env:ALLUSERSPROFILE\BingWallpaper.vbs"
 }
 
