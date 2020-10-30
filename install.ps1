@@ -11,13 +11,14 @@ if ($Host.Version.Major -ge 3) {
 }
 else {
     $Xml = "$env:TMP\BingWallpaper.xml"
+    [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072;
     (New-Object Net.WebClient).DownloadFile('https://raw.fastgit.org/star2000/BingWallpaper/master/BingWallpaper.xml', $Xml)
     schtasks /Create /XML $Xml /TN '\star2000\BingWallpaper' /F
     Remove-Item $Xml -Force
 }
 
 @'
-CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""(New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/star2000/BingWallpaper/master/wallup.ps1') | iex""",0
+CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072; (New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/star2000/BingWallpaper/master/wallup.ps1') | iex""",0
 '@ > "$env:ALLUSERSPROFILE\BingWallpaper.vbs"
 
 schtasks /Run /TN '\star2000\BingWallpaper'

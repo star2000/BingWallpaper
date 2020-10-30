@@ -20,13 +20,13 @@ Windows 每日必应壁纸
 ### 安装
 
 ```ps1
-powershell (New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/star2000/BingWallpaper/master/install.ps1') | iex
+powershell [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072; (New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/star2000/BingWallpaper/master/install.ps1') | iex
 ```
 
 ### 卸载
 
 ```ps1
-powershell (New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/star2000/BingWallpaper/master/uninstall.ps1') | iex
+powershell [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072; (New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/star2000/BingWallpaper/master/uninstall.ps1') | iex
 ```
 
 ## 设置
@@ -44,7 +44,7 @@ powershell (New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/st
   - 环境变量名：`WallpaperResolution`
   - 默认值：`1920x1080`
   - 可选值：
-    - `UHD`（原图分辨率，一般4k以上）
+    - `UHD`（原图分辨率，一般 4k 以上）
     - `1920x1200`
     - `1920x1080`
     - `1366x768`
