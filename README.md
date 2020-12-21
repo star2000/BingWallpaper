@@ -32,8 +32,14 @@ powershell [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManage
 ## 设置
 
 通过环境变量改变行为
+```bat
+setx "环境变量名" "环境变量值"
+```
 
-手动刷新执行`schtasks /Run /TN "\star2000\BingWallpaper"`
+手动刷新执行
+```bat
+schtasks /Run /TN "\star2000\BingWallpaper"
+```
 
 - 保存路径
   - 环境变量名：`WallpaperPath`
