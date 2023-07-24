@@ -20,23 +20,25 @@ Windows 每日必应壁纸
 ### 安装
 
 ```ps1
-powershell [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072; (New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/star2000/BingWallpaper/master/install.ps1') | iex
+powershell [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072; (New-Object Net.WebClient).DownloadString('https://cdn.jsdelivr.net/gh/star2000/BingWallpaper@master/install.ps1') | iex
 ```
 
 ### 卸载
 
 ```ps1
-powershell [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072; (New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/star2000/BingWallpaper/master/uninstall.ps1') | iex
+powershell [Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072; (New-Object Net.WebClient).DownloadString('https://cdn.jsdelivr.net/gh/star2000/BingWallpaper@master/uninstall.ps1') | iex
 ```
 
 ## 设置
 
 通过环境变量改变行为
+
 ```bat
 setx "环境变量名" "环境变量值"
 ```
 
 手动刷新执行
+
 ```bat
 schtasks /Run /TN "\star2000\BingWallpaper"
 ```

@@ -37,7 +37,7 @@ Remove-Item $Wallpaper -Force
 # Update link
 if (Test-Path "$env:ALLUSERSPROFILE\BingWallpaper.vbs") {
     @'
-CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072; (New-Object Net.WebClient).DownloadString('https://raw.fastgit.org/star2000/BingWallpaper/master/wallup.ps1') | iex""",0
+CreateObject("WScript.Shell").Run "powershell -NoProfile -NonInteractive ""[Net.ServicePointManager]::SecurityProtocol = [Net.ServicePointManager]::SecurityProtocol -bor 3072; (New-Object Net.WebClient).DownloadString('https://cdn.jsdelivr.net/gh/star2000/BingWallpaper@master/wallup.ps1') | iex""",0
 '@ > "$env:ALLUSERSPROFILE\BingWallpaper.vbs"
 }
 
