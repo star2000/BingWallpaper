@@ -23,8 +23,6 @@ $Bitmap.Dispose()
 
 (Add-Type '[DllImport("user32.dll")]public static extern bool SystemParametersInfo (uint uiAction, uint uiParam, String pvParam, uint fWinIni);' -Name '_' -PassThru)::SystemParametersInfo(20, 0, $WallpaperBitmap, 3)
 
-Remove-Item $WallpaperBitmap -Force
-
 # Save wallpaper if $env:WallpaperPath is set
 if ($Path) {
     if ($Path -notmatch '.jpg$') {
